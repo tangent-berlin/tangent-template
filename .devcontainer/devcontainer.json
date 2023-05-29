@@ -62,7 +62,7 @@
       "extensions": [
         "alefragnani.Bookmarks",
         "amazonwebservices.aws-toolkit-vscode",
-        "bmalehorn.vscode-fish",
+        "skyapps.fish-vscode",
         "bradlc.vscode-tailwindcss",
         "christian-kohler.npm-intellisense",
         "christian-kohler.path-intellisense",
