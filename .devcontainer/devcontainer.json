@@ -13,7 +13,9 @@
   //     "POETRY_VERSION": "1.4.2"
   //   }
   // },
-  "updateContentCommand": "fish -c 'poetry install && bun install'",
+  "waitFor": "postCreateCommand",
+  "onCreateCommand": "git config --global --add safe.directory /workspaces/tangent-template",
+  "updateContentCommand": "poetry install && bun install",
   "postAttachCommand": {
     "server": "bun run dev"
   },
@@ -27,6 +29,10 @@
   },
   "remoteUser": "root",
   "remoteEnv": {
+    "HOME": "${containerEnv:HOME}",
+    "XDG_CONFIG_HOME": "${containerEnv:XDG_CONFIG_HOME}",
+    "XDG_CACHE_HOME": "${containerEnv:XDG_CACHE_HOME}",
+    "PATH": "${containerEnv:PATH}:/opt/bun/bin:/opt/cargo/bin:/opt/poetry/bin",
     "LANGUAGE": "en_US:en",
     "LC_ALL": "en_US.UTF-8",
     "TZ": "Europe/Berlin",
@@ -74,10 +80,10 @@
         "mikestead.dotenv",
         "monokai.theme-monokai-pro-vscode",
         "ms-azuretools.vscode-docker",
-        "ms-python.black-formatter",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
+        "ms-python.black-formatter",
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter-renderers",
         "ms-toolsai.vscode-jupyter-cell-tags",
