@@ -13,7 +13,7 @@
   //     "POETRY_VERSION": "1.4.2"
   //   }
   // },
-  "updateContentCommand": "git config --global --add safe.directory /workspaces/tangent-template && fish -c 'poetry install && bun install'",
+  "updateContentCommand": "fish -c 'poetry install && bun install'",
   "postAttachCommand": {
     "server": "bun run dev"
   },
