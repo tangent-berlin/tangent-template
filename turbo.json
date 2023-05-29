@@ -1,0 +1,31 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        ".contentlayer/**",
+        ".next/**",
+        ".vercel/**",
+        "build/**",
+        "dist/**"
+      ]
+    },
+    "check": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "serve": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
+    "test": {
+      "outputs": []
+    }
+  }
+}

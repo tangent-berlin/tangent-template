@@ -1,0 +1,29 @@
+{
+  "name": "tangent-template",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Monorepo starter for bun and python projects",
+  "license": "MIT",
+  "author": "Tangent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangent-berlin/template.git"
+  },
+  "scripts": {
+    "postinstall": "pnpm i --lockfile-only",
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "serve": "turbo run serve --parallel",
+    "test": "turbo run test  --parallel",
+    "check": "turbo run check --parallel",
+    "lint": "turbo run lint --parallel"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/typescript/*"
+  ],
+  "packageManager": "pnpm@8.5.1",
+  "engines": {
+    "node": "18"
+  }
+}

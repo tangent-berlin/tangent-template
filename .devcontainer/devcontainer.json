@@ -1,0 +1,104 @@
+{
+  // "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+  "name": "tangent-template",
+  "image": "recrash/base:latest",
+  // "dockerFile": "Dockerfile",
+  // "context": ".",
+  // "build": {
+  //   "args": {
+  //     "PYTHON_VERSION": "3.11",
+  //     "NODEJS_VERSION": "18",
+  //     "PNPM_VERSION": "8.5.1",
+  //     "BUN_VERSION": "0.6.2",
+  //     "POETRY_VERSION": "1.4.2"
+  //   }
+  // },
+  "updateContentCommand": "git config --global --add safe.directory /workspaces/tangent-template && fish -c 'poetry install && bun install'",
+  "postAttachCommand": {
+    "server": "bun run dev"
+  },
+  "workspaceFolder": "/workspaces/tangent-template",
+  "forwardPorts": [3000],
+  "containerUser": "root",
+  "containerEnv": {
+    "HOME": "/root",
+    "XDG_CONFIG_HOME": "/root/.config",
+    "XDG_CACHE_HOME": "/root/.cache"
+  },
+  "remoteUser": "root",
+  "remoteEnv": {
+    "LANGUAGE": "en_US:en",
+    "LC_ALL": "en_US.UTF-8",
+    "TZ": "Europe/Berlin",
+    "EDITOR": "/usr/bin/micro",
+    "TERM": "/usr/bin/fish",
+    "MICRO_TRUECOLOR": "1",
+    "FZF_DEFAULT_COMMAND": "/usr/bin/fd",
+    "BAT_PAGER": "/usr/bin/bat",
+    "FD_OPTIONS": "--hidden --no-ignore-vcs"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
+    "vscode": {
+      "settings": {
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": false,
+        "python.languageServer": "Pylance",
+        "breadcrumbs.enabled": true,
+        "gitlens.currentLine.dateFormat": "DD.MM.YY",
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "typescript.updateImportsOnFileMove.enabled": "always"
+      },
+      "extensions": [
+        "alefragnani.Bookmarks",
+        "amazonwebservices.aws-toolkit-vscode",
+        "bmalehorn.vscode-fish",
+        "bradlc.vscode-tailwindcss",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "DavidAnson.vscode-markdownlint",
+        "davidlday.languagetool-linter",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "GitHub.codespaces",
+        "Gruntfuggly.todo-tree",
+        "mathe42.surreal-notebook",
+        "mathe42.surrealql",
+        "mechatroner.rainbow-csv",
+        "mikestead.dotenv",
+        "monokai.theme-monokai-pro-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-python.black-formatter",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "PKief.material-icon-theme",
+        "quicktype.quicktype",
+        "redhat.vscode-yaml",
+        "richie5um2.vscode-sort-json",
+        "rome.rome",
+        "steoates.autoimport",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-german",
+        "streetsidesoftware.code-spell-checker-scientific-terms",
+        "tamasfe.even-better-toml",
+        "TheNuProjectContributors.vscode-nushell-lang",
+        "tombonnike.vscode-status-bar-format-toggle",
+        "Tyriar.sort-lines",
+        "wix.vscode-import-cost",
+        "yzhang.markdown-all-in-one",
+        "Zignd.html-css-class-completion"
+      ]
+    }
+  }
+}

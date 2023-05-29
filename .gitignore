@@ -1,0 +1,78 @@
+# Monorepo
+#  .gitignore for monorepo with node and python projects
+
+# chache
+.cache/
+!.cache/.gitignore
+
+# dependencies
+**/node_modules/
+**/*.bun
+**/.pnpm-store/
+**/.pnp
+**/.pnp.js
+
+# Node build artifacts
+**/.turbo/
+**/.next/
+**/.vercel/
+**/.contentlayer
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+
+# C extensions
+**/*.so
+
+# Distribution / packaging
+.Python
+**/build/
+**/develop-eggs/
+**/dist/
+**/downloads/
+**/eggs/
+**/.eggs/
+**/lib/
+**/lib64/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+**/share/python-wheels/
+**/*.egg-info/
+**/.installed.cfg
+**/*.egg
+**/MANIFEST
+
+# PyInstaller
+**/*.manifest
+**/*.spec
+
+# misc
+**/.DS_Store
+**/*.pem
+
+# debug
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# local env files
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Unit test / coverage reports
+**/htmlcov/
+**/.tox/
+**/.nox/
+**/.coverage
+**/.coverage.*
+**/.cache
+**/nosetests.xml
+**/coverage.xml
+**/*.cover
