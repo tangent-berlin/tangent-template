@@ -21,7 +21,6 @@
   },
   "workspaceFolder": "/workspaces/tangent-template",
   "forwardPorts": [3000],
-  "containerUser": "root",
   "containerEnv": {
     "HOME": "/root",
     "XDG_CONFIG_HOME": "/root/.config",
@@ -95,8 +94,6 @@
         "rome.rome",
         "steoates.autoimport",
         "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-german",
-        "streetsidesoftware.code-spell-checker-scientific-terms",
         "tamasfe.even-better-toml",
         "TheNuProjectContributors.vscode-nushell-lang",
         "tombonnike.vscode-status-bar-format-toggle",
