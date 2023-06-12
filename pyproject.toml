@@ -37,7 +37,7 @@ bump_message = "bump: $current_version → $new_version"
 [tool.poetry.dev-dependencies]
 ipython = "^7.29.0"
 jupyterlab = "^3"
-#JLDracula = "^0.1.0"
+JLDracula = "*"
 amazon_codeguru_jupyterlab_extension = "^1.0.0"
 mypy = "0.910"
 black = "^23.3.0"

@@ -1,7 +1,7 @@
 # Start with the base image
 FROM ubuntu:jammy AS builder
 
-LABEL version="0.1"
+LABEL version="0.2"
 LABEL description="Devcontainer image with poetry and bun multirepo"
 LABEL maintainer="contact@tangent.berlin"
 
@@ -115,7 +115,9 @@ RUN curl -fsSL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functi
     curl -fsSL https://raw.githubusercontent.com/tangent-berlin/bash-bashing/main/scripts/files/git/setup_git_diff-so-fancy_aliases.sh | bash -
 
 COPY config/* "$HOME/.config/"
-RUN mv -f "$HOME/.config/config.fish" "$HOME/.config/fish/config.fish"
+RUN mv -f "$HOME/.config/config.fish" "$HOME/.config/fish/config.fish" && \
+    mv -f "$HOME/.config/.gitconfig" "$HOME/.gitconfig" && \
+    mv -f "$HOME/.config/.gitattributes" "$HOME/.gitattributes"
 
 # ToDo: Set up a config volume
 #VOLUME ["/mnt/config"]

@@ -2,11 +2,11 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": [
-        ".contentlayer/**",
         ".next/**",
-        ".vercel/**",
         "build/**",
         "dist/**"
       ]
@@ -21,7 +21,9 @@
       "outputs": []
     },
     "serve": {
-      "dependsOn": ["build"],
+      "dependsOn": [
+        "build"
+      ],
       "outputs": []
     },
     "test": {
